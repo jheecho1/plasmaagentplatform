@@ -12,9 +12,9 @@
   @page { size: 297mm 210mm; margin: 0; }
   html,body{margin:0;background:#f4f6f9;}
   .wrap{position:relative;width:100%;overflow:hidden;}
-  .scale{position:absolute;top:24px;left:0;width:1600px;height:1131px;transform-origin:top left;box-shadow:0 10px 40px rgba(15,27,51,.10);}
+  .scale{position:absolute;top:24px;left:0;width:1600px;height:1170px;transform-origin:top left;box-shadow:0 10px 40px rgba(15,27,51,.10);}
   body{font-family:"Noto Sans KR","Noto Sans CJK KR",sans-serif;color:#0f1b33;-webkit-font-smoothing:antialiased;}
-  .page{width:1600px;height:1131px;position:relative;overflow:hidden;background:#fff;}
+  .page{width:1600px;height:1170px;position:relative;overflow:hidden;background:#fff;}
   .inner{position:absolute;inset:60px 84px 48px 84px;}
   /* plasma ring graphic */
   .ring{position:absolute;right:-40px;top:-120px;width:560px;height:560px;border-radius:50%;
@@ -27,34 +27,49 @@
   h1{margin:10px 0 0;font-size:72px;font-weight:700;letter-spacing:-.025em;line-height:1.08;}
   h1 em{font-style:normal;color:#0e9a93;}
   .sub{margin-top:16px;font-size:26px;color:#5a6680;font-weight:400;}
-  .stack{position:absolute;left:0;right:0;top:296px;}
+  .stack{position:absolute;left:0;right:0;top:318px;}
   .agents{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
-  .agent{border:1.5px solid #d9dfe8;border-radius:20px;padding:26px 32px 24px;position:relative;background:#fff;}
+  .agent{border:1.5px solid #d9dfe8;border-radius:20px;padding:24px 30px 22px;position:relative;background:#fff;}
   .agent .tag{display:inline-block;font-size:16px;letter-spacing:.14em;font-weight:600;padding:6px 13px;border-radius:999px;margin-bottom:14px;}
   .now .tag{background:#0e9a93;color:#fff;}
   .next .tag{background:#e6f4f3;color:#0e9a93;}
   .last .tag{background:#f1f3f7;color:#6b7891;}
   .agent h3{margin:0;font-size:34px;font-weight:700;letter-spacing:-.015em;}
-  .agent p{margin:10px 0 0;font-size:22px;line-height:1.45;color:#3b465c;}
+  .agent p{margin:8px 0 0;font-size:21px;white-space:nowrap;line-height:1.45;color:#3b465c;}
   .agent .who{margin-top:16px;font-size:19px;color:#6b7891;}
+  .agent .dir2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;}
+  .agent .d{border-top:2.5px solid #0e9a93;padding-top:7px;font-size:16px;color:#3b465c;line-height:1.3;white-space:nowrap;}
+  .agent .d.back{border-top-color:#0f1b33;}
+  .agent .d b{display:block;color:#0f1b33;font-size:17px;font-weight:700;margin-bottom:1px;}
+  .agent .d small{display:block;font-size:14px;color:#6b7891;margin-top:2px;}
   .agent .who b{color:#0f1b33;font-weight:600;}
-  .conn{height:48px;position:relative;}
-  .conn:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:2px;background:#cfd6e2;}
-  .conn:after{content:"";position:absolute;left:calc(50% - 7px);top:-1px;border:7px solid transparent;border-bottom:10px solid #cfd6e2;border-top:0;}
-  .conn span{position:absolute;left:calc(50% + 16px);top:13px;font-size:18px;color:#6b7891;}
+  .conn{height:48px;display:flex;align-items:center;gap:20px;}
+  .conn:before,.conn:after{content:"";flex:1;height:1px;background:#dfe4ec;}
+  .conn span{font-size:17px;color:#6b7891;letter-spacing:.1em;white-space:nowrap;}
   .layer{border-radius:20px;padding:24px 36px 26px;display:grid;grid-template-columns:360px 1fr;align-items:center;gap:30px;}
   .layer .name{font-size:15px;letter-spacing:.24em;opacity:.7;font-weight:600;}
   .layer .brand{font-size:38px;font-weight:700;margin-top:4px;letter-spacing:-.015em;}
-  .layer .role{font-size:19px;opacity:.78;margin-top:5px;}
+  .layer .role{font-size:17px;line-height:1.4;opacity:.78;margin-top:6px;white-space:nowrap;}
   .chips{display:flex;gap:14px;}
-  .chip{flex:1;border-radius:14px;padding:18px 20px;font-size:21px;font-weight:600;line-height:1.3;}
-  .chip small{display:block;font-weight:400;font-size:16px;opacity:.78;margin-top:5px;}
+  .chip{flex:1 1 0;min-width:0;border-radius:14px;padding:18px 20px;font-size:21px;font-weight:600;line-height:1.3;}
+  .chip small{display:block;font-weight:400;font-size:15px;line-height:1.4;opacity:.8;margin-top:6px;white-space:nowrap;}
   .agency{background:#e6f4f3;color:#0b3f3c;margin-bottom:14px;}
   .agency .chip{background:#fff;color:#0b3f3c;}
   .agency .chip.new{outline:2.5px solid #0e9a93;}
   .engine{background:#0f1b33;color:#fff;}
   .engine .chip{background:rgba(255,255,255,.08);color:#fff;}
   .foot{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;font-size:18px;color:#8a94a8;}
+  .offer{position:absolute;right:0;top:84px;width:560px;border:1.5px solid #d9dfe8;border-radius:18px;padding:16px 24px 14px;background:#fff;box-sizing:border-box;}
+  .offer .t{font-size:14px;letter-spacing:.24em;color:#6b7891;font-weight:600;margin-bottom:6px;}
+  .offer .row{display:flex;align-items:baseline;gap:14px;padding:5px 0;border-top:1px solid #eef1f5;font-size:19px;color:#3b465c;}
+  .offer .row:first-of-type{border-top:0}
+  .offer .row b{font-size:22px;color:#0f1b33;font-weight:700;min-width:190px;}
+  .offer .row b.ag{color:#0b3f3c}
+  .offer .row span{flex:1}
+  .offer .row small{font-size:16px;color:#6b7891;white-space:nowrap}
+  .offer .ask{margin-top:6px;font-size:16px;color:#0e9a93;font-weight:600;}
+  .offer .ask a{color:inherit;text-decoration:none}
+  .anim .offer{opacity:0;transform:translateY(24px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:.75s}
   .mark{position:absolute;right:0;top:14px;text-align:right;font-size:17px;line-height:1.6;color:#8a94a8;}
   /* animation (presentation mode) */
   .anim .engine,.anim .agency,.anim .agent,.anim .conn,.anim h1,.anim .sub,.anim .eyebrow,.anim .mark{opacity:0;transform:translateY(24px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;}
@@ -71,13 +86,22 @@
   <h1>하나의 물리 엔진,<br><em>세 가지 에이전트</em></h1>
   <div class="sub">같은 엔진이 설계·공정·장비의 질문에 각각 답한다</div>
   <div class="mark">특허출원 10-2026-0194058<br>상표출원 Plasma Agent · Plasma Agency</div>
+  <div class="offer">
+    <div class="t">WHAT WE OFFER</div>
+    <div class="row"><b>Plasma Agent</b><span>물리 엔진 라이선스</span><small>RF 부품사 · 대학</small></div>
+    <div class="row"><b class="ag">Plasma Agency</b><span>트윈 + 설계 서비스</span><small>장비사 · 소자 업체</small></div>
+    <div class="ask">사양을 보내 주시면 적용 범위와 계산 가능 여부를 먼저 알려 드립니다 · <a href="mailto:jheecho1@naver.com">jheecho1@naver.com</a></div>
+  </div>
 
   <div class="stack">
     <div class="agents">
       <div class="agent now"><span class="tag">지금</span>
         <h3>R&amp;D Agent</h3>
-        <p>소스를 만들기 전에 설계안을 고른다</p>
-        <div class="who"><b>장비사 · 대학 · RF 부품사</b> — 공정 데이터 없이</div>
+        <p>소스를 만들기 전에, 같은 엔진을 두 방향으로 쓴다</p>
+        <div class="dir2">
+          <div class="d"><b>→ 만드는 쪽</b>형상에서 결과로, 설계안 비교<small>장비사 · 대학 · RF 부품사</small></div>
+          <div class="d back"><b>← 사는 쪽</b>목표에서 사양으로, 구매 사양<small>소자 업체 · 벤더 비교</small></div>
+        </div>
       </div>
       <div class="agent next"><span class="tag">다음</span>
         <h3>Process Optimization</h3>
@@ -94,18 +118,18 @@
     <div class="layer agency">
       <div><div class="name">TWIN LAYER</div><div class="brand">Plasma Agency</div><div class="role">측정에 맞추고, 결과를 추천한다</div></div>
       <div class="chips">
-        <div class="chip">Calibration<small>측정으로 보정</small></div>
-        <div class="chip new">Process Models<small>플라즈마 → 공정 결과</small></div>
-        <div class="chip">Recommender<small>공정 창 · 추천 · 승인</small></div>
+        <div class="chip">Calibration<small>2-D 해석 · 프로브 · 웨이퍼로 보정<br>물리층 / 공정층 분리</small></div>
+        <div class="chip new">Process Models<small>플라즈마 상태 → 공정 결과<br>질화 검증 · 식각 틀</small></div>
+        <div class="chip">Recommender<small>공정 창 지도 · 민감도 · 추천<br>승인 뒤 반영 · 장비 제어 없음</small></div>
       </div>
     </div>
     <div class="layer engine">
-      <div><div class="name">PHYSICS ENGINE</div><div class="brand">Plasma Agent</div><div class="role">형상·조건 → 플라즈마 상태, 0.2초</div></div>
+      <div><div class="name">PHYSICS ENGINE</div><div class="brand">Plasma Agent</div><div class="role">형상·가스·조건 → 플라즈마 상태, 0.2초<br>소스 4형식 한 인터페이스 · 검증 비율 명시</div></div>
       <div class="chips">
-        <div class="chip">Database<small>단면적 · 반응률</small></div>
-        <div class="chip">Source Modules<small>코일 · 전극 · 리모트</small></div>
-        <div class="chip">0-D Global Model<small>밀도 · 온도 · 라디칼</small></div>
-        <div class="chip">Radial Profile<small>기판면 분포</small></div>
+        <div class="chip">Database<small>LXCat 단면적 파일 →<br>반응률 · EEDF 실행 중 생성</small></div>
+        <div class="chip">Source Modules<small>ICP 3형 · CCP · 바이어스 · 리모트<br>형상 → 흡수 분포</small></div>
+        <div class="chip">0-D Global Model<small>혼합 가스 이온종별 수지 →<br>Te · 밀도 · 라디칼 · 펄스</small></div>
+        <div class="chip">Radial Profile<small>링 모델 →<br>기판면 플럭스 분포 · 불균일도</small></div>
       </div>
     </div>
   </div>
@@ -113,10 +137,10 @@
 </div></div></div></div>
 <script>
 (function(){
-  function fit(){var w=Math.min(document.documentElement.clientWidth-16,1600);var s=w/1600;
+  function fit(){var cw=document.documentElement.clientWidth-16,ch=window.innerHeight-48;var s=Math.min(cw/1600,ch/1170,1);
     var el=document.querySelector('.scale');el.style.transform='scale('+s+')';
     el.style.left=Math.max(0,(document.documentElement.clientWidth-1600*s)/2)+'px';
-    el.parentNode.style.height=(1131*s+48)+'px';}
+    el.parentNode.style.height=(1170*s+48)+'px';}
   window.addEventListener('resize',fit);fit();
   if(location.hash!=='#still'){document.body.classList.add('anim');}
 })();
