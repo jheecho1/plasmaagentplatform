@@ -17,9 +17,9 @@
   @page { size: 297mm 210mm; margin: 0; }
   html,body{margin:0;background:#f4f6f9;}
   .wrap{position:relative;width:100%;overflow:hidden;}
-  .scale{position:absolute;top:24px;left:0;width:1600px;height:1170px;transform-origin:top left;box-shadow:0 10px 40px rgba(15,27,51,.10);}
+  .scale{position:absolute;top:24px;left:0;width:1600px;height:1256px;transform-origin:top left;box-shadow:0 10px 40px rgba(15,27,51,.10);}
   body{font-family:"Noto Sans KR","Noto Sans CJK KR",sans-serif;color:#0f1b33;-webkit-font-smoothing:antialiased;}
-  .page{width:1600px;height:1170px;position:relative;overflow:hidden;background:#fff;}
+  .page{width:1600px;height:1256px;position:relative;overflow:hidden;background:#fff;}
   .inner{position:absolute;inset:60px 84px 48px 84px;}
   /* plasma ring graphic */
   .ring{position:absolute;right:-40px;top:-120px;width:560px;height:560px;border-radius:50%;
@@ -32,7 +32,7 @@
   h1{margin:10px 0 0;font-size:72px;font-weight:700;letter-spacing:-.025em;line-height:1.08;}
   h1 em{font-style:normal;color:#0e9a93;}
   .sub{margin-top:16px;font-size:26px;color:#5a6680;font-weight:400;}
-  .stack{position:absolute;left:0;right:0;top:318px;}
+  .stack{position:absolute;left:0;right:0;top:424px;}
   .agents{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
   .agent{border:1.5px solid #d9dfe8;border-radius:20px;padding:24px 30px 22px;position:relative;background:#fff;}
   .agent .tag{display:inline-block;font-size:16px;letter-spacing:.14em;font-weight:600;padding:6px 13px;border-radius:999px;margin-bottom:14px;}
@@ -77,6 +77,14 @@
   .anim .offer{opacity:0;transform:translateY(24px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:.75s}
   .lang{position:absolute;right:0;top:-18px;font-size:15px;letter-spacing:.12em;color:#8a94a8;}
   .lang a{color:#0e9a93;text-decoration:none;font-weight:600;}
+  .cta{position:absolute;right:0;top:324px;width:480px;display:flex;gap:16px}
+  .cta a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:54px;padding:0 12px;border-radius:12px;font-size:16px;line-height:1.2;font-weight:700;text-decoration:none;letter-spacing:.01em;text-align:left}
+  .cta a span{display:block}
+  .cta a small{display:block;font-size:12.5px;font-weight:500;opacity:.85;margin-top:2px}
+  .cta a.p{background:#0e9a93;color:#fff}
+  .cta a.s{border:2px solid #0f1b33;color:#0f1b33;background:#fff}
+  .cta svg{width:16px;height:16px;flex:0 0 16px}
+  .anim .cta{opacity:0;transform:translateY(24px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:.6s}
   .mark{position:absolute;right:0;top:14px;text-align:right;font-size:17px;line-height:1.6;color:#8a94a8;}
   /* animation (presentation mode) */
   .anim .engine,.anim .agency,.anim .agent,.anim .conn,.anim h1,.anim .sub,.anim .eyebrow,.anim .mark{opacity:0;transform:translateY(24px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;}
@@ -93,12 +101,13 @@
   <div class="eyebrow">Plasma Agent Platform</div>
   <h1>하나의 물리 엔진,<br><em>세 가지 에이전트</em></h1>
   <div class="sub">같은 엔진이 설계·공정·장비의 질문에 각각 답한다</div>
+  <div class="cta"><a class="p" href="/ko/samples.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2l11 6-11 6z" fill="currentColor"/></svg><span>샘플 결과<small>돌아가는 걸 보기</small></span></a><a class="s" href="/PlasmaAgentPlatform_공개판_v2.1.pdf"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1h7l3 3v11H3z M10 1v3h3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 8h6M5 11h6" stroke="currentColor" stroke-width="1.6"/></svg><span>사업 한 장<small>(PDF 2쪽)</small></span></a></div>
   <div class="mark">특허출원 10-2026-0194058<br>상표출원 Plasma Agent · Plasma Agency</div>
   <div class="offer">
     <div class="t">WHAT WE OFFER</div>
     <div class="row"><b>Plasma Agent</b><span>물리 엔진 라이선스</span><small>RF 부품사 · 대학</small></div>
     <div class="row"><b class="ag">Plasma Agency</b><span>트윈 + 설계 서비스</span><small>장비사 · 소자 업체</small></div>
-    <div class="ask">사양을 보내 주시면 적용 범위와 계산 가능 여부를 먼저 알려 드립니다 · <a href="mailto:jheecho1@naver.com">jheecho1@naver.com</a> · <a href="/ko/samples.html">샘플 결과</a> · <a href="/PlasmaAgentPlatform_공개판_v2.1.pdf">자세히 보기 (PDF 2쪽)</a></div>
+    <div class="ask">사양을 보내 주시면 적용 범위와 계산 가능 여부를 먼저 알려 드립니다 · <a href="mailto:jheecho1@naver.com">jheecho1@naver.com</a></div>
   </div>
 
   <div class="stack">
@@ -145,10 +154,10 @@
 </div></div></div></div>
 <script>
 (function(){
-  function fit(){var cw=document.documentElement.clientWidth-16,ch=window.innerHeight-48;var s=Math.min(cw/1600,ch/1170,1);
+  function fit(){var cw=document.documentElement.clientWidth-16,ch=window.innerHeight-48;var s=Math.min(cw/1600,ch/1256,1);
     var el=document.querySelector('.scale');el.style.transform='scale('+s+')';
     el.style.left=Math.max(0,(document.documentElement.clientWidth-1600*s)/2)+'px';
-    el.parentNode.style.height=(1170*s+48)+'px';}
+    el.parentNode.style.height=(1256*s+48)+'px';}
   window.addEventListener('resize',fit);fit();
   if(location.hash!=='#still'){document.body.classList.add('anim');}
 })();
