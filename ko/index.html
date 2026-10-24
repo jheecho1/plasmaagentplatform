@@ -17,9 +17,9 @@
   @page { size: 297mm 210mm; margin: 0; }
   html,body{margin:0;background:#f4f6f9;}
   .wrap{position:relative;width:100%;overflow:hidden;}
-  .scale{position:absolute;top:24px;left:0;width:1600px;height:1256px;transform-origin:top left;box-shadow:0 10px 40px rgba(15,27,51,.10);}
+  .scale{position:absolute;top:24px;left:0;width:1600px;height:1290px;transform-origin:top left;box-shadow:0 10px 40px rgba(15,27,51,.10);}
   body{font-family:"Noto Sans KR","Noto Sans CJK KR",sans-serif;color:#0f1b33;-webkit-font-smoothing:antialiased;}
-  .page{width:1600px;height:1256px;position:relative;overflow:hidden;background:#fff;}
+  .page{width:1600px;height:1290px;position:relative;overflow:hidden;background:#fff;}
   .inner{position:absolute;inset:60px 84px 48px 84px;}
   /* plasma ring graphic */
   .ring{position:absolute;right:-40px;top:-120px;width:560px;height:560px;border-radius:50%;
@@ -101,7 +101,7 @@
   <div class="eyebrow">Plasma Agent Platform</div>
   <h1>하나의 물리 엔진,<br><em>세 가지 에이전트</em></h1>
   <div class="sub">같은 엔진이 설계·공정·장비의 질문에 각각 답한다</div>
-  <div class="cta"><a class="p" href="/ko/samples.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2l11 6-11 6z" fill="currentColor"/></svg><span>샘플 결과<small>돌아가는 걸 보기</small></span></a><a class="s" href="/PlasmaAgentPlatform_공개판_v2.1.pdf"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1h7l3 3v11H3z M10 1v3h3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 8h6M5 11h6" stroke="currentColor" stroke-width="1.6"/></svg><span>사업 한 장<small>(PDF 2쪽)</small></span></a></div>
+  <div class="cta"><a class="p" href="/ko/samples.html"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2l11 6-11 6z" fill="currentColor"/></svg><span>샘플 결과<small>돌아가는 걸 보기</small></span></a><a class="s" href="/PlasmaAgentPlatform_공개판_v2.1.pdf"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1h7l3 3v11H3z M10 1v3h3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M5 8h6M5 11h6" stroke="currentColor" stroke-width="1.6"/></svg><span>사업 한 장<small>PDF 2쪽 · 한글</small></span></a></div>
   <div class="mark">특허출원 10-2026-0194058<br>상표출원 Plasma Agent · Plasma Agency</div>
   <div class="offer">
     <div class="t">WHAT WE OFFER</div>
@@ -150,14 +150,14 @@
       </div>
     </div>
   </div>
-  <div class="foot"><span>plasmaagentplatform.com</span><span>Dr. Jo (조정희) · <a href="mailto:jheecho1@naver.com" style="color:inherit">jheecho1@naver.com</a> · 2026-10</span></div>
+  <div class="foot"><span>plasmaagentplatform.com · <a href="/ko/about.html" style="color:#0e9a93;text-decoration:none;font-weight:600">소개</a></span><span>Dr. Jo (조정희) · <a href="mailto:jheecho1@naver.com" style="color:inherit">jheecho1@naver.com</a> · 2026-10</span></div>
 </div></div></div></div>
 <script>
 (function(){
-  function fit(){var cw=document.documentElement.clientWidth-16,ch=window.innerHeight-48;var s=Math.min(cw/1600,ch/1256,1);
+  function fit(){var cw=document.documentElement.clientWidth-16,ch=window.innerHeight-48;var s=Math.min(cw/1600,ch/1290,1);
     var el=document.querySelector('.scale');el.style.transform='scale('+s+')';
     el.style.left=Math.max(0,(document.documentElement.clientWidth-1600*s)/2)+'px';
-    el.parentNode.style.height=(1256*s+48)+'px';}
+    el.parentNode.style.height=(1290*s+48)+'px';}
   window.addEventListener('resize',fit);fit();
   if(location.hash!=='#still'){document.body.classList.add('anim');}
 })();
