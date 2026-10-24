@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plasma Agent Platform — One physics engine, three agents</title>
+<meta name="description" content="Agentic plasma engineering, physics first. Design the plasma source, predict the process and calibrate to measurement on one physics engine — before you build. Plasma Agent (engine) · Plasma Agency (twin + design service).">
+<meta property="og:title" content="Plasma Agent Platform">
+<meta property="og:description" content="One physics engine, three agents — the same engine answers design, process and tool questions">
+<meta property="og:image" content="https://plasmaagentplatform.com/PlasmaAgentPlatform_한장.png">
+<link rel="canonical" href="https://plasmaagentplatform.com/en/">
+<link rel="alternate" hreflang="ko" href="https://plasmaagentplatform.com/">
+<link rel="alternate" hreflang="en" href="https://plasmaagentplatform.com/en/">
+<link rel="alternate" hreflang="x-default" href="https://plasmaagentplatform.com/en/">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  @page { size: 297mm 210mm; margin: 0; }
+  html,body{margin:0;background:#f4f6f9;}
+  .wrap{position:relative;width:100%;overflow:hidden;}
+  .scale{position:absolute;top:24px;left:0;width:1600px;height:1170px;transform-origin:top left;box-shadow:0 10px 40px rgba(15,27,51,.10);}
+  body{font-family:"Noto Sans","Noto Sans KR",sans-serif;color:#0f1b33;-webkit-font-smoothing:antialiased;}
+  .page{width:1600px;height:1170px;position:relative;overflow:hidden;background:#fff;}
+  .inner{position:absolute;inset:60px 84px 48px 84px;}
+  /* plasma ring graphic */
+  .ring{position:absolute;right:-40px;top:-120px;width:560px;height:560px;border-radius:50%;
+    background:radial-gradient(circle at 50% 50%, rgba(14,154,147,0) 0 38%, rgba(14,154,147,.10) 46%, rgba(14,154,147,.32) 53%, rgba(14,154,147,.06) 60%, rgba(14,154,147,0) 66%);
+    filter:blur(.3px);}
+  .ring2{position:absolute;right:120px;top:40px;width:240px;height:240px;border-radius:50%;
+    background:radial-gradient(circle, rgba(15,27,51,.10) 0 28%, rgba(15,27,51,0) 62%);}
+  .ring .core{position:absolute;left:50%;top:50%;width:14px;height:14px;margin:-7px;border-radius:50%;background:#0e9a93;box-shadow:0 0 0 10px rgba(14,154,147,.18),0 0 40px rgba(14,154,147,.5);}
+  .eyebrow{font-size:20px;letter-spacing:.3em;color:#6b7891;font-weight:500;text-transform:uppercase;}
+  h1{margin:10px 0 0;font-size:72px;font-weight:700;letter-spacing:-.025em;line-height:1.08;}
+  h1 em{font-style:normal;color:#0e9a93;}
+  .sub{margin-top:16px;font-size:26px;color:#5a6680;font-weight:400;}
+  .stack{position:absolute;left:0;right:0;top:318px;}
+  .agents{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+  .agent{border:1.5px solid #d9dfe8;border-radius:20px;padding:24px 30px 22px;position:relative;background:#fff;}
+  .agent .tag{display:inline-block;font-size:16px;letter-spacing:.14em;font-weight:600;padding:6px 13px;border-radius:999px;margin-bottom:14px;}
+  .now .tag{background:#0e9a93;color:#fff;}
+  .next .tag{background:#e6f4f3;color:#0e9a93;}
+  .last .tag{background:#f1f3f7;color:#6b7891;}
+  .agent h3{margin:0;font-size:34px;font-weight:700;letter-spacing:-.015em;}
+  .agent p{margin:8px 0 0;font-size:21px;white-space:nowrap;line-height:1.45;color:#3b465c;}
+  .agent .who{margin-top:16px;font-size:19px;color:#6b7891;}
+  .agent .dir2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:14px;}
+  .agent .d{border-top:2.5px solid #0e9a93;padding-top:7px;font-size:16px;color:#3b465c;line-height:1.3;white-space:nowrap;}
+  .agent .d.back{border-top-color:#0f1b33;}
+  .agent .d b{display:block;color:#0f1b33;font-size:17px;font-weight:700;margin-bottom:1px;}
+  .agent .d small{display:block;font-size:14px;color:#6b7891;margin-top:2px;}
+  .agent .who b{color:#0f1b33;font-weight:600;}
+  .conn{height:48px;display:flex;align-items:center;gap:20px;}
+  .conn:before,.conn:after{content:"";flex:1;height:1px;background:#dfe4ec;}
+  .conn span{font-size:17px;color:#6b7891;letter-spacing:.1em;white-space:nowrap;}
+  .layer{border-radius:20px;padding:24px 36px 26px;display:grid;grid-template-columns:360px 1fr;align-items:center;gap:30px;}
+  .layer .name{font-size:15px;letter-spacing:.24em;opacity:.7;font-weight:600;}
+  .layer .brand{font-size:38px;font-weight:700;margin-top:4px;letter-spacing:-.015em;}
+  .layer .role{font-size:17px;line-height:1.4;opacity:.78;margin-top:6px;white-space:nowrap;}
+  .chips{display:flex;gap:14px;}
+  .chip{flex:1 1 0;min-width:0;border-radius:14px;padding:18px 20px;font-size:21px;font-weight:600;line-height:1.3;}
+  .chip small{display:block;font-weight:400;font-size:15px;line-height:1.4;opacity:.8;margin-top:6px;white-space:nowrap;}
+  .agency{background:#e6f4f3;color:#0b3f3c;margin-bottom:14px;}
+  .agency .chip{background:#fff;color:#0b3f3c;}
+  .agency .chip.new{outline:2.5px solid #0e9a93;}
+  .engine{background:#0f1b33;color:#fff;}
+  .engine .chip{background:rgba(255,255,255,.08);color:#fff;}
+  .foot{position:absolute;left:0;right:0;bottom:0;display:flex;justify-content:space-between;font-size:18px;color:#8a94a8;}
+  .offer{position:absolute;right:0;top:84px;width:560px;border:1.5px solid #d9dfe8;border-radius:18px;padding:16px 24px 14px;background:#fff;box-sizing:border-box;}
+  .offer .t{font-size:14px;letter-spacing:.24em;color:#6b7891;font-weight:600;margin-bottom:6px;}
+  .offer .row{display:flex;align-items:baseline;gap:14px;padding:5px 0;border-top:1px solid #eef1f5;font-size:19px;color:#3b465c;}
+  .offer .row:first-of-type{border-top:0}
+  .offer .row b{font-size:22px;color:#0f1b33;font-weight:700;min-width:190px;}
+  .offer .row b.ag{color:#0b3f3c}
+  .offer .row span{flex:1}
+  .offer .row small{font-size:16px;color:#6b7891;white-space:nowrap}
+  .offer .ask{margin-top:6px;font-size:16px;color:#0e9a93;font-weight:600;}
+  .offer .ask a{color:inherit;text-decoration:none}
+  .anim .offer{opacity:0;transform:translateY(24px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:.75s}
+  .lang{position:absolute;right:0;top:-18px;font-size:15px;letter-spacing:.12em;color:#8a94a8;}
+  .lang a{color:#0e9a93;text-decoration:none;font-weight:600;}
+  .mark{position:absolute;right:0;top:14px;text-align:right;font-size:17px;line-height:1.6;color:#8a94a8;}
+  /* animation (presentation mode) */
+  .anim .engine,.anim .agency,.anim .agent,.anim .conn,.anim h1,.anim .sub,.anim .eyebrow,.anim .mark{opacity:0;transform:translateY(24px);animation:rise .7s cubic-bezier(.2,.7,.2,1) forwards;}
+  .anim .eyebrow{animation-delay:.1s}.anim h1{animation-delay:.25s}.anim .sub{animation-delay:.45s}.anim .mark{animation-delay:.6s}
+  .anim .engine{animation-delay:.9s}.anim .agency{animation-delay:1.5s}.anim .conn{animation-delay:2.0s}
+  .anim .now{animation-delay:2.3s}.anim .next{animation-delay:2.55s}.anim .last{animation-delay:2.8s}
+  
+  @keyframes rise{to{opacity:1;transform:none}}
+  @keyframes pulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.04);opacity:1}}
+  /* EN overrides: English runs longer */
+  .agent h3{font-size:31px}
+  .agent p{white-space:normal;font-size:19px;line-height:1.35}
+  .agent .d{white-space:normal;font-size:15px;line-height:1.3}
+  .agent .d b{font-size:16px}
+  .agent .who{font-size:17px}
+  .chip{padding:16px 16px}
+  .chip small{white-space:normal;font-size:14px;line-height:1.35}
+  .layer .role{white-space:normal;font-size:16px}
+  .layer .brand{font-size:36px}
+  .offer .row{gap:10px}
+  .offer .row b{min-width:150px;font-size:20px}
+  .offer .row span{font-size:17px}
+  .offer .row small{white-space:normal;font-size:14px;text-align:right;max-width:170px}
+  .offer .ask{font-size:15px}
+  .conn span{letter-spacing:.06em;font-size:15px}
+  .foot{font-size:15px}
+  .stack{top:300px}
+  .chip small{white-space:nowrap}
+  .layer .role{white-space:nowrap}
+</style></head>
+<body><div class="wrap"><div class="scale"><div class="page">
+  <div class="inner">
+  <div class="lang"><a href="/">KO</a> · EN</div>
+  <div class="eyebrow">Plasma Agent Platform</div>
+  <h1>One physics engine,<br><em>three agents</em></h1>
+  <div class="sub">The same engine answers design, process and tool questions</div>
+  <div class="mark">KR patent pending 10-2026-0194058<br>Trademarks pending: Plasma Agent · Plasma Agency</div>
+  <div class="offer">
+    <div class="t">WHAT WE OFFER</div>
+    <div class="row"><b>Plasma Agent</b><span>physics-engine license</span><small>RF makers · universities</small></div>
+    <div class="row"><b class="ag">Plasma Agency</b><span>twin + design service</span><small>tool &amp; device makers</small></div>
+    <div class="ask">Send us your spec — we first tell you if it is in range and computable · <a href="mailto:jheecho1@naver.com">jheecho1@naver.com</a></div>
+  </div>
+
+  <div class="stack">
+    <div class="agents">
+      <div class="agent now"><span class="tag">NOW</span>
+        <h3>R&amp;D Agent</h3>
+        <p>Before you build — one engine, both ways</p>
+        <div class="dir2">
+          <div class="d"><b>→ Makers</b>geometry → outcome, compare designs<small>tool makers · universities · RF</small></div>
+          <div class="d back"><b>← Buyers</b>target → source spec, purchase spec<small>device makers · vendors</small></div>
+        </div>
+      </div>
+      <div class="agent next"><span class="tag">NEXT</span>
+        <h3>Process Optimization</h3>
+        <p>Predicts process results from a recipe</p>
+        <div class="who"><b>device makers · process teams</b> — wafer-calibrated</div>
+      </div>
+      <div class="agent last"><span class="tag">LAST</span>
+        <h3>Machine Control</h3>
+        <p>Keeps the recipe on track at the tool</p>
+        <div class="who"><b>tool makers</b> — joint development</div>
+      </div>
+    </div>
+    <div class="conn"><span>SAME ENGINE · DIFFERENT USE</span></div>
+    <div class="layer agency">
+      <div><div class="name">TWIN LAYER</div><div class="brand">Plasma Agency</div><div class="role">Fits to measurement, recommends outcomes</div></div>
+      <div class="chips">
+        <div class="chip">Calibration<small>2-D, probe, wafer data<br>physics / process layers apart</small></div>
+        <div class="chip new">Process Models<small>plasma state → process result<br>nitridation validated · etch next</small></div>
+        <div class="chip">Recommender<small>process window · sensitivity<br>approval first · no tool control</small></div>
+      </div>
+    </div>
+    <div class="layer engine">
+      <div><div class="name">PHYSICS ENGINE</div><div class="brand">Plasma Agent</div><div class="role">Geometry · gas · conditions → plasma state, 0.2 s<br>4 source types, one interface · validated ranges</div></div>
+      <div class="chips">
+        <div class="chip">Database<small>LXCat cross sections →<br>rates · EEDF at run time</small></div>
+        <div class="chip">Source Modules<small>ICP ×3 · CCP · bias · remote<br>geometry → power profile</small></div>
+        <div class="chip">0-D Global Model<small>mixed-gas ion balances →<br>Te · density · radicals · pulsed</small></div>
+        <div class="chip">Radial Profile<small>ring model →<br>wafer flux profile · uniformity</small></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>plasmaagentplatform.com · from assistant to agentic control — one engine, three levels of autonomy</span><span>Dr. Jo (Junghee Cho) · <a href="mailto:jheecho1@naver.com" style="color:inherit">jheecho1@naver.com</a> · 2026-10</span></div>
+</div></div></div></div>
+<script>
+(function(){
+  function fit(){var cw=document.documentElement.clientWidth-16,ch=window.innerHeight-48;var s=Math.min(cw/1600,ch/1170,1);
+    var el=document.querySelector('.scale');el.style.transform='scale('+s+')';
+    el.style.left=Math.max(0,(document.documentElement.clientWidth-1600*s)/2)+'px';
+    el.parentNode.style.height=(1170*s+48)+'px';}
+  window.addEventListener('resize',fit);fit();
+  if(location.hash!=='#still'){document.body.classList.add('anim');}
+})();
+</script>
+</body></html>
