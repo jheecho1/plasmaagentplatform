@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>샘플 결과 — Plasma Agent Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;background:#f4f6f9;color:#0f1b33;font-family:"Noto Sans KR",sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1100px;margin:0 auto;padding:40px 20px 60px}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .eyebrow{font-size:13px;letter-spacing:.26em;color:#6b7891;font-weight:600}
+  .lang{font-size:14px;letter-spacing:.1em;color:#8a94a8;font-weight:600} .lang a{color:#0e9a93;text-decoration:none}
+  h1{margin:6px 0 10px;font-size:clamp(28px,4.5vw,44px);line-height:1.15;letter-spacing:-.02em;font-weight:700}
+  .sub{font-size:16px;line-height:1.7;color:#3b465c;max-width:760px;margin:0 0 28px}
+  .card{background:#fff;border-radius:16px;padding:18px;margin:0 0 22px;box-shadow:0 6px 24px rgba(15,27,51,.06)}
+  .card img,.card video{width:100%;height:auto;display:block;border-radius:10px;background:#fff}
+  figcaption{margin-top:12px} figcaption b{display:block;font-size:17px;margin-bottom:4px} figcaption span{font-size:14px;line-height:1.65;color:#3b465c}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .ask{background:#0f1b33;color:#fff;border-radius:16px;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:8px}
+  .ask b{font-size:17px} .ask a{color:#2fc4bc;text-decoration:none;font-weight:600}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#8a94a8;margin-top:28px;border-top:1px solid #dfe4ec;padding-top:14px}
+  .foot a{color:inherit}
+</style></head><body><div class="wrap">
+  <div class="top"><div><div class="eyebrow">PLASMA AGENT PLATFORM · 샘플 결과</div></div><div class="lang"><a href="/samples.html">EN</a> · KO</div></div>
+  <h1>엔진이 실제로 내는 것</h1>
+  <p class="sub">0-D 물리 엔진 Plasma Agent의 계산 결과 네 장과 화면 녹화 하나. 전부 일반 설계·정규화 값이며, 추세는 문헌·자체 측정 대비 ±20 %, 절대 밀도는 ×0.5~1.2 범위입니다.</p>
+
+  <figure class="card">
+    <video autoplay loop muted playsinline poster="../assets/demo_poster.jpg">
+      <source src="../assets/demo_split_sweep.mp4" type="video/mp4">
+      <img src="../assets/demo_split_sweep.gif" alt="화면 녹화 — 분배비를 바꾸면 0.2초 뒤 분포가 따라온다">
+    </video>
+    <figcaption><b>화면 녹화 — 분배비를 바꾸면 0.2초 뒤 분포가 따라온다</b><span>평판 이중 코일 ICP, Ar 20 mTorr, 1.5 kW. Inner/Outer 파워 몫을 10 → 50 → 90 %로 바꾸면 기판면 밀도 분포 곡선이 즉시 갱신됩니다. 17초, 무음. 치수·계수 패널은 가렸습니다.</span></figcaption>
+  </figure>
+
+  <div class="grid">
+    <figure class="card">
+      <img src="../assets/F1_power_split_profile.png" alt="F-1 · 분배비 → 기판면 플럭스 분포" loading="lazy">
+      <figcaption><b>F-1 · 분배비 → 기판면 플럭스 분포</b><span>이중 코일 ICP, N₂ 10 mTorr, 1.5 kW. 다이얼 하나(Inner 몫 10/50/90 %)로 중심 볼록 ↔ 가장자리 볼록을 오갑니다. 50 % 중심값으로 정규화. 설계 선별과 구매 사양의 기준.</span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="../assets/F2_pressure_power_sweep.png" alt="F-2 · 압력·파워 스윕 → Te, nₑ 추세 지도" loading="lazy">
+      <figcaption><b>F-2 · 압력·파워 스윕 → Te, nₑ 추세 지도</b><span>176개 운전점, 점당 0.3초. 전자온도는 절대값(검증 ±0.3 eV), 전자밀도는 10 mTorr / 1.5 kW 기준점 대비 비. 공정 창을 미리 본다는 것이 이런 뜻입니다.</span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="../assets/F3_icp_vs_ccp.png" alt="F-3 · 같은 조건에서 ICP vs CCP" loading="lazy">
+      <figcaption><b>F-3 · 같은 조건에서 ICP vs CCP</b><span>Ar 20 mTorr, 500 W. 평판 ICP(ICP = 1) 대비 평행판 CCP 13.56 MHz: 전자온도 ×0.31, 기판 평균 이온 에너지 ×4.1, 기판 이온 선속 ×0.22. 소스 4형식이 한 인터페이스이므로 같은 조건에서 바로 비교됩니다. CCP 전자온도는 이중온도 모델의 유효 온도.</span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="../assets/F4_treatment_map.png" alt="F-4 · 플라즈마 처리 맵 (예시)" loading="lazy">
+      <figcaption><b>F-4 · 플라즈마 처리 맵 (예시)</b><span>Process Models — 분배 A(중심 가중) / B(가장자리 가중)의 13점(1-4-8) 상대 처리량, 최대값 = 1. 불균일도 3 % 대 7 %. 자체 측정으로 보정한 모델 예시이며 절대 농도·시간은 표시하지 않습니다.</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="ask"><b>사양을 보내 주시면 적용 범위와 계산 가능 여부를 먼저 알려 드립니다.</b><span><a href="mailto:jheecho1@naver.com">jheecho1@naver.com</a> · <a href="/ko/">한 장으로 →</a></span></div>
+
+  <div class="foot"><span><a href="/ko/">plasmaagentplatform.com</a></span><span>Dr. Jo (조정희) · 2026-10</span></div>
+</div></body></html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sample output — Plasma Agent Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  html,body{margin:0;background:#f4f6f9;color:#0f1b33;font-family:"Noto Sans","Noto Sans KR",sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1100px;margin:0 auto;padding:40px 20px 60px}
+  .top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:8px}
+  .eyebrow{font-size:13px;letter-spacing:.26em;color:#6b7891;font-weight:600}
+  .lang{font-size:14px;letter-spacing:.1em;color:#8a94a8;font-weight:600} .lang a{color:#0e9a93;text-decoration:none}
+  h1{margin:6px 0 10px;font-size:clamp(28px,4.5vw,44px);line-height:1.15;letter-spacing:-.02em;font-weight:700}
+  .sub{font-size:16px;line-height:1.7;color:#3b465c;max-width:760px;margin:0 0 28px}
+  .card{background:#fff;border-radius:16px;padding:18px;margin:0 0 22px;box-shadow:0 6px 24px rgba(15,27,51,.06)}
+  .card img,.card video{width:100%;height:auto;display:block;border-radius:10px;background:#fff}
+  figcaption{margin-top:12px} figcaption b{display:block;font-size:17px;margin-bottom:4px} figcaption span{font-size:14px;line-height:1.65;color:#3b465c}
+  .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+  @media(max-width:760px){.grid{grid-template-columns:1fr}}
+  .ask{background:#0f1b33;color:#fff;border-radius:16px;padding:22px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-top:8px}
+  .ask b{font-size:17px} .ask a{color:#2fc4bc;text-decoration:none;font-weight:600}
+  .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#8a94a8;margin-top:28px;border-top:1px solid #dfe4ec;padding-top:14px}
+  .foot a{color:inherit}
+</style></head><body><div class="wrap">
+  <div class="top"><div><div class="eyebrow">PLASMA AGENT PLATFORM · SAMPLE OUTPUT</div></div><div class="lang">EN · <a href="/ko/samples.html">KO</a></div></div>
+  <h1>What the engine actually produces</h1>
+  <p class="sub">Four results from the Plasma Agent 0-D physics engine and one screen recording. All on a generic design, normalized; trends validated ±20 % against literature and in-house measurements, absolute density within ×0.5–1.2.</p>
+
+  <figure class="card">
+    <video autoplay loop muted playsinline poster="assets/demo_poster.jpg">
+      <source src="assets/demo_split_sweep.mp4" type="video/mp4">
+      <img src="assets/demo_split_sweep.gif" alt="Screen recording — change the power split, the profile follows in 0.2 s">
+    </video>
+    <figcaption><b>Screen recording — change the power split, the profile follows in 0.2 s</b><span>Planar dual-coil ICP, Ar 20 mTorr, 1.5 kW. Moving the inner/outer power share 10 → 50 → 90 % updates the radial density profile immediately. 17 s, silent. Geometry and coefficient panels are masked.</span></figcaption>
+  </figure>
+
+  <div class="grid">
+    <figure class="card">
+      <img src="assets/F1_power_split_profile.png" alt="F-1 · Power split → wafer flux profile" loading="lazy">
+      <figcaption><b>F-1 · Power split → wafer flux profile</b><span>Dual-coil ICP, N₂ 10 mTorr, 1.5 kW. One dial — the inner share at 10/50/90 % — moves the profile from edge-high to center-high. Normalized to the 50 % center value. The basis for design screening and purchase specs.</span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="assets/F2_pressure_power_sweep.png" alt="F-2 · Pressure · power sweep → Te, nₑ trend map" loading="lazy">
+      <figcaption><b>F-2 · Pressure · power sweep → Te, nₑ trend map</b><span>176 operating points at 0.3 s each. Electron temperature in absolute terms (validated ±0.3 eV); density relative to the 10 mTorr / 1.5 kW reference. This is what "previewing the process window" means.</span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="assets/F3_icp_vs_ccp.png" alt="F-3 · Same conditions, ICP vs CCP" loading="lazy">
+      <figcaption><b>F-3 · Same conditions, ICP vs CCP</b><span>Ar 20 mTorr, 500 W. Parallel-plate CCP at 13.56 MHz relative to planar ICP (= 1): electron temperature ×0.31, mean ion energy at the wafer ×4.1, ion flux to the wafer ×0.22. Four source types share one interface, so the comparison is direct. CCP Te is the effective temperature of a two-temperature model.</span></figcaption>
+    </figure>
+    <figure class="card">
+      <img src="assets/F4_treatment_map.png" alt="F-4 · Plasma treatment map (example)" loading="lazy">
+      <figcaption><b>F-4 · Plasma treatment map (example)</b><span>Process Models — relative treatment amount on a 13-point (1-4-8) map for split A (center-weighted) and B (edge-weighted), max = 1. Non-uniformity 3 % vs 7 %. A model example calibrated on in-house data; absolute concentration and time are not shown.</span></figcaption>
+    </figure>
+  </div>
+
+  <div class="ask"><b>Send us your spec — we first tell you if it is in range and computable.</b><span><a href="mailto:jheecho1@naver.com">jheecho1@naver.com</a> · <a href="/">Back to one page →</a></span></div>
+
+  <div class="foot"><span><a href="/">plasmaagentplatform.com</a></span><span>Dr. Jeonghee Jo · 2026-10</span></div>
+</div></body></html>
