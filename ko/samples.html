@@ -22,10 +22,25 @@
   .ask b{font-size:17px} .ask a{color:#2fc4bc;text-decoration:none;font-weight:600}
   .foot{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:#8a94a8;margin-top:28px;border-top:1px solid #dfe4ec;padding-top:14px}
   .foot a{color:inherit}
+  .match{padding:24px 24px 22px}
+  .match .k{font-size:12px;letter-spacing:.24em;color:#0e9a93;font-weight:700;margin-bottom:6px}
+  .match h2{margin:0 0 8px;font-size:clamp(22px,3vw,30px);letter-spacing:-.01em;line-height:1.2}
+  .match p.lead{margin:0 0 16px;font-size:15px;line-height:1.7;color:#3b465c;max-width:820px}
+  .match figure{margin:0 0 18px}
+  .mgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+  @media(max-width:760px){.mgrid{grid-template-columns:1fr}}
+  .mbox{background:#f4f6f9;border-radius:12px;padding:14px 16px}
+  .mbox h3{margin:0 0 8px;font-size:15px}
+  .mbox table{width:100%;border-collapse:collapse;font-size:14px;color:#3b465c}
+  .mbox td{padding:6px 0;border-top:1px solid #dfe4ec;vertical-align:top}
+  .mbox td.n{text-align:right;color:#0f1b33;font-weight:700;white-space:nowrap;padding-left:12px}
+  .mbox p{margin:6px 0 0;font-size:13.5px;line-height:1.6;color:#3b465c}
+  .tag{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:2px 8px;margin-right:6px}
+  .ok{background:#d5eeec;color:#0b7a74} .nv{background:#e4e8ef;color:#5a6680}
 </style></head><body><div class="wrap">
   <div class="top"><div><div class="eyebrow">PLASMA AGENT PLATFORM · 샘플 결과</div></div><div class="lang"><a href="/samples.html">EN</a> · KO</div></div>
   <h1>엔진이 실제로 내는 것</h1>
-  <p class="sub">0-D 물리 엔진 Plasma Agent의 계산 결과 네 장과 화면 녹화 하나. 전부 일반 설계·정규화 값이며, 추세는 문헌·실측 대비 ±20 %, 절대 밀도는 ×0.5~1.2 범위입니다.</p>
+  <p class="sub">0-D 물리 엔진 Plasma Agent의 계산 결과 네 장, 화면 녹화 둘, 새 RF 매칭 모듈. 전부 일반 설계·정규화 값이며, 추세는 문헌·실측 대비 ±20 %, 절대 밀도는 ×0.5~1.2 범위입니다.</p>
 
   <figure class="card">
     <video autoplay loop muted playsinline poster="../assets/demo_mix_poster_v391.jpg">
@@ -53,6 +68,41 @@
       <figcaption><b>F-4 · 플라즈마 처리 맵 (예시)</b><span>Process Models — 분배 A(중심 가중) / B(가장자리 가중)의 13점(1-4-8) 상대 처리량, 최대값 = 1. 불균일도 3 % 대 7 %. 실측으로 보정한 모델 예시이며 절대 농도·시간은 표시하지 않습니다.</span></figcaption>
     </figure>
   </div>
+
+
+  <section class="card match">
+    <div class="k">v3.10 새 기능 · RF 매칭</div>
+    <h2>플라즈마에서 매처 사양까지</h2>
+    <p class="lead">같은 플라즈마 계산으로 운전 범위 전체의 매처 출력 임피던스, 스미스 차트 위의 매칭 창, 배선 가이드, 그리고 매처 사양(가변 커패시터 범위·정격·발열·효율)을 오차 폭과 함께 범위로 냅니다. 코일 사이 전력 분배와 매처 손실은 플라즈마로 되돌아가 서로 맞을 때까지 계산됩니다.</p>
+    <figure>
+      <video autoplay loop muted playsinline poster="../assets/demo_match_poster_v310.jpg">
+        <source src="../assets/demo_match_v310.mp4" type="video/mp4">
+      </video>
+      <figcaption><b>화면 녹화 — 압력 → 전류비 → 매칭 창 → 배선 가이드</b><span>평판 이중 코일 ICP, N₂. 압력을 바꾸면 예측값과 제안서 오차 폭이 갱신되고, Inner/Outer 전류비를 바꾸면 분배기 해가 다시 풀립니다. 매칭 창은 운전점 17개를 덮고, 마지막 장면에서 배선 가이드와 전용 매처 사양이 그려집니다. 25초, 1.5배속, 무음. 모델 세부와 가정한 회로 값은 가렸습니다.</span></figcaption>
+    </figure>
+    <div class="mgrid">
+      <div class="mbox">
+        <h3>제안서에 쓰는 오차 폭</h3>
+        <table>
+          <tr><td>코일 전류(같은 공급 전력)</td><td class="n">±10 %</td></tr>
+          <tr><td>매처 출력 임피던스(원통형 솔레노이드, N₂ 저압)</td><td class="n">±15 %</td></tr>
+          <tr><td>매처 위치(부품 값이 정해진 매처)</td><td class="n">±12 %p</td></tr>
+          <tr><td>매처 효율(추정)</td><td class="n">±5 %p</td></tr>
+          <tr><td>코일 단자 전압</td><td class="n">제안하지 않음</td></tr>
+        </table>
+        <p>근거: 장비별 보정 없이 원통형 실장비와 블라인드 대조 — 코일 전류 ±2~5 %, 매처 출력 임피던스 ±11 %(일부 구성).</p>
+      </div>
+      <div class="mbox">
+        <h3>지금 상태</h3>
+        <table>
+          <tr><td><span class="tag ok">검증 완료</span>원통형 솔레노이드·이중코일</td><td class="n">실장비</td></tr>
+          <tr><td><span class="tag nv">기본형 완성</span>평판형·CCP 매처 사양</td><td class="n">첫 실측으로 확정</td></tr>
+        </table>
+        <p>계산하지 않는 것: 반사 전력(완전 매칭 가정), 바이어스(척) 매처. 새 장비는 실측 전에 예측을 기록해 두고, 측정이 오면 대조합니다.</p>
+        <p><b>매처 사양서 샘플 전체는 비밀유지계약 뒤 공유합니다.</b></p>
+      </div>
+    </div>
+  </section>
 
   <div class="ask"><b>사양을 보내 주시면 적용 범위와 계산 가능 여부를 먼저 알려 드립니다.</b><span><a href="mailto:jheecho1@naver.com">jheecho1@naver.com</a> · <a href="/ko/">한 장으로 →</a></span></div>
 
