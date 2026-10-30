@@ -37,6 +37,9 @@
   .mbox p{margin:6px 0 0;font-size:13.5px;line-height:1.6;color:#3b465c}
   .tag{display:inline-block;font-size:12px;font-weight:700;border-radius:999px;padding:2px 8px;margin-right:6px}
   .ok{background:#d5eeec;color:#0b7a74} .nv{background:#e4e8ef;color:#5a6680}
+  .st td{font-size:13.5px}
+  .st .tag{width:104px;text-align:center;box-sizing:border-box;margin-right:8px}
+  @media(min-width:1150px){.st td,.st td.n{white-space:nowrap}}
 </style></head><body><div class="wrap">
   <div class="top"><div><div class="eyebrow">PLASMA AGENT PLATFORM · SAMPLE OUTPUT</div></div><div class="lang">EN · <a href="/ko/samples.html">KO</a></div></div>
   <h1>What the engine actually produces</h1>
@@ -94,9 +97,9 @@
       </div>
       <div class="mbox">
         <h3>Where it stands</h3>
-        <table>
+        <table class="st">
           <tr><td><span class="tag ok">verified</span>Cylindrical solenoid · dual-coil</td><td class="n">on real tools</td></tr>
-          <tr><td><span class="tag nv">baseline ready</span>Planar · CCP matcher specs</td><td class="n" style="white-space:normal">finalized at first measurement</td></tr>
+          <tr><td><span class="tag nv">baseline ready</span>Planar · CCP matcher specs</td><td class="n">confirmed by first test</td></tr>
         </table>
         <p>Not computed: reflected power (a perfect match is assumed) and bias (chuck) matchers. New tools are predicted and recorded before measurement, then compared when data arrive.</p>
         <p><b>A full matcher-spec sample is shared under NDA.</b></p>
