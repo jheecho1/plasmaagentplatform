@@ -57,11 +57,48 @@
   .sec .k{font-size:12px;letter-spacing:.24em;color:#0e9a93;font-weight:700;margin-bottom:6px}
   .sec h2{margin:0 0 8px;font-size:clamp(22px,3vw,30px);letter-spacing:-.01em;line-height:1.2}
   .sec p{margin:0;font-size:15px;line-height:1.7;color:#3b465c;max-width:820px}
+  .rtab td.n{white-space:normal;min-width:40%}
+  .rtab td.n .tag{margin:2px 0 0 8px}
+  .mbox{min-width:0}
+  .rtab td small{display:block;color:#6b7891;font-size:12.5px;margin-top:2px}
+  .tag.no{background:#f6e3d9;color:#9a4a1c}
+  .mbox ul{margin:4px 0 0;padding-left:18px;font-size:14px;line-height:1.7;color:#3b465c}
 </style></head><body><div class="wrap">
   <div class="top"><div><div class="eyebrow">PLASMA AGENT PLATFORM · SAMPLE OUTPUT</div></div><div class="lang">EN · <a href="/ko/samples.html">KO</a></div></div>
   <h1>What you get back</h1>
-  <p class="sub">Two things on this page: the RF matching output, and what the physics engine computes underneath. Every result is a simulation before experiment — confirmed on your own tool.</p>
-  <nav class="jump"><a href="#rf"><b>1</b>RF matching</a><a href="#engine"><b>2</b>The engine underneath</a></nav>
+  <p class="sub">Three things on this page: a tool proposal from a process target, the RF matching output, and what the physics engine computes underneath. Every result is a simulation before experiment — confirmed on your own tool.</p>
+  <nav class="jump"><a href="#etch"><b>1</b>Etch example — target to tool proposal</a><a href="#rf"><b>2</b>RF matching</a><a href="#engine"><b>3</b>The engine underneath</a></nav>
+
+  <section class="card match" id="etch">
+    <div class="k">EXAMPLE REQUEST · GATE POLY-SI DRY ETCH</div>
+    <h2>Give us the process target — get a tool proposal back</h2>
+    <p class="lead">300 mm gate poly-Si dry etch on an ICP source with wafer bias. All we received were targets for etch rate, selectivity, non-uniformity and pressure, plus the gases, bias frequencies and chuck. We computed three source structures against two bias frequencies (13.56 and 2 MHz) and picked the recommended structure and recipe from the 193 operating conditions that met every target. About one day from request to proposal. Below is the proposal's first page.</p>
+    <ol class="flow">
+      <li><i>1</i><b>Your target</b><span>process · film · numbers</span></li>
+      <li><i>2</i><b>Requirement spec</b><span>every value with its source</span></li>
+      <li><i>3</i><b>Tool proposal</b><span>structure · RF matching · recipe</span></li>
+      <li><i>4</i><b>Process window</b><span>where the targets are met</span></li>
+      <li class="you"><i>5</i><b>Confirm on your tool</b><span>after installation</span></li>
+    </ol>
+    <div class="mgrid">
+      <div class="mbox">
+        <h3>Your targets and our predictions — recommended: planar dual coil + 2 MHz bias</h3>
+        <table class="rtab"><tr><td>Poly-Si etch rate<small>target ≥ 150 nm/min</small></td><td class="n">378 nm/min<span class="tag ok">met</span></td></tr><tr><td>Si : SiO₂ selectivity<small>target ≥ 30 : 1</small></td><td class="n">38.3 : 1<span class="tag ok">met</span></td></tr><tr><td>Etch-rate non-uniformity<small>target ≤ 2.5 %</small></td><td class="n">1.57 %<span class="tag ok">met</span></td></tr><tr><td>Process pressure<small>target 4–7 mTorr</small></td><td class="n">7 mTorr<span class="tag ok">met</span></td></tr><tr><td>Coil terminal voltage<small>target < 2000 V rms</small></td><td class="n">1281 V rms<span class="tag ok">met</span></td></tr><tr><td>Matcher efficiency<small>target > 0.85</small></td><td class="n">source 0.956 · bias 0.945<span class="tag ok">met</span></td></tr><tr><td>Ion energy at the wafer<small>target 100–420 eV (reference)</small></td><td class="n">212 eV<span class="tag nv">reference · in range</span></td></tr><tr><td>Chuck<small>target ESC bias chuck (heated)</small></td><td class="n">ESC bias chuck · heater not included<span class="tag no">not met</span></td></tr></table>
+      </div>
+      <div class="mbox">
+        <h3>What the proposal contains</h3>
+        <ul>
+          <li>Three source structures compared — type · chamber · window · coils</li>
+          <li>Source matcher + splitter, a bias matcher and matching window per bias frequency</li>
+          <li>The recommended recipe, and one per structure and frequency</li>
+          <li>Process window in pressure · source power · bias power</li>
+          <li>Anything we did not compute is marked "not met" or "out of prediction scope"</li>
+        </ul>
+        <p>All values are predictions before installation. Chuck heating was not part of this design and is marked not met; CD, profile and production items are outside the prediction scope. This is an example request made to show the method, not a real order.</p>
+        <p><b>The full tool proposal (hardware, matching network, recipes, process window) is shared under NDA.</b></p>
+      </div>
+    </div>
+  </section>
 
   <section class="card match" id="rf">
     <div class="k">REQUEST · RF MATCHING</div>
@@ -91,7 +128,7 @@
           <tr><td><span class="tag ok">benchmarked</span>Cylindrical solenoid · dual-coil</td><td class="n">against real tools</td></tr>
           <tr><td><span class="tag nv">baseline ready</span>Planar · CCP matcher specs</td><td class="n">confirmed on your tool</td></tr>
         </table>
-        <p>Scope: a perfect match is assumed; bias (chuck) matchers come next. For a new tool the prediction is recorded before measurement; you compare it on your own tool, with the procedure we provide.</p>
+        <p>Scope: a perfect match is assumed; bias (chuck) matchers are designed in the etch example above. For a new tool the prediction is recorded before measurement; you compare it on your own tool, with the procedure we provide.</p>
         <p><b>A full matcher-spec sample is shared under NDA.</b></p>
       </div>
     </div>
